@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="img/png" href="img/favicon-96x96.ico">
+
+    <!-- Titel von Tab  -->
+    <title>Notizen</title>
+
+    <!--Wenn eine Neue CSS-Datei erstellt wird immer mit diesen Code einbinden mit den Pfad zum Datei und name bei "href"-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+
+    <!-- Responsive Menü -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Javascript-Dateien -->
+    <script src="script.js"></script>
+
+
+    <!-- Bei robots.txt sperrs du Suchmaschinen von deine Rechtlichen html Dateien, falls da noch was hinzugefügt werden muss kannst es dort noch schreiben -->
+</head>
+
+
+<body onload="onload()">
+    <!--Hier fügst du deine "function" von deinem script.js Datei hinzu!, das hat nichts mit ID zu tun-->
+
+    <div class="icon-title">
+        <img src="./img/title-note-icon.png" class="title-note-icon">
+        <h1>Notizen</h1>
+    </div>
+
+    <div class="take-notes-area">
+        <div class="take-notes">
+            <input class="note-title" type="text" placeholder="Titel" id="noteTitle" maxlength="30">
+            <textarea class="note-text" type="text" placeholder="Notiz schreiben..." id="noteText"></textarea>
+            <div class="submit">
+                <button class="add-button" onclick="addNote()">Hinzufügen</button>
+            </div>
+        </div>
+        <div class="menu">
+            <button class="button"  onclick="noteRender('noteButton')" id="noteButton">
+                <img src="img/note-white.png" id="noteIconBlack">
+                Notizen
+            </button>
+            <button class="button" onclick="archiveRender('archiveButton')" id="archiveButton">
+                <img src="img/archiv-white.png" id="archiveIconBlack">
+                Archiv
+            </button>
+            <button class="button" onclick="binRender('deleteButton')" id="deleteButton">
+                <img src="img/trash-white.png" id="binIconBlack">
+                Papierkorb
+            </button>
+        </div>
+    </div>
+
+    <div class="border"></div>
+
+    <div class="my-notes" id="myNotes"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
